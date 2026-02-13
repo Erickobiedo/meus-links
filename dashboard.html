@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Meus Links</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>🔗 Meus Links Promovidos</h1>
+                <div class="user-info">
+                    <span id="userName">Usuário</span>
+                    <button id="logoutBtn" class="btn-logout">Sair</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Botão para adicionar novo link -->
+            <div class="add-link-section">
+                <button id="addLinkBtn" class="btn-add">
+                    <span class="plus-icon">+</span>
+                    Adicionar Novo Link
+                </button>
+            </div>
+
+            <!-- Modal para adicionar link -->
+            <div id="linkModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Adicionar Novo Link</h2>
+                    
+                    <form id="linkForm">
+                        <div class="form-group">
+                            <label for="plataforma">Escolha a Plataforma:</label>
+                            <select id="plataforma" name="plataforma" required>
+                                <option value="">Selecione...</option>
+                                <option value="tiktok">📱 TikTok</option>
+                                <option value="instagram">📷 Instagram</option>
+                                <option value="whatsapp">💬 WhatsApp</option>
+                                <option value="youtube">▶️ YouTube</option>
+                                <option value="github">🐙 GitHub</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nome">Nome do Link:</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Ex: Meu Canal no YouTube">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="imagem">URL da Imagem:</label>
+                            <input type="url" id="imagem" name="imagem" required placeholder="https://exemplo.com/imagem.jpg">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="link">URL do Link:</label>
+                            <input type="url" id="link" name="link" required placeholder="https://...">
+                        </div>
+
+                        <button type="submit" class="btn-submit">Salvar Link</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Grid de links -->
+            <div class="links-grid" id="linksGrid">
+                <!-- Links serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="dashboard-footer">
+        <div class="container">
+            <p>by: obscure spam</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
